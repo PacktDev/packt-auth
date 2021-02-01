@@ -43,6 +43,8 @@ class PacktAuth extends Controller
                 'provider' => $provider,
                 'provider_id' => $userInfo->id
             ]);
+
+            $user->markEmailAsVerified();
         }
 
         return $user;
