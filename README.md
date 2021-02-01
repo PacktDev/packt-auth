@@ -6,20 +6,8 @@ This package defines the basis of O365 login for all Packt Platforms
 
 You can install the package via composer:
 
-Open composer.json and add after the scripts section:
-```json
-"repositories":[
-    {
-    "type": "vcs",
-    "url": "git@github.com:CNSam/packt-auth.git"
-    }
-]
-```
-
-Then run the following
-
 ```bash
-composer require packt/packt-auth
+composer require packtdev/packt-auth
 ```
 
 Publish and run the required migrations using:
