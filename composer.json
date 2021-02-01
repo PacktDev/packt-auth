@@ -1,16 +1,15 @@
 {
-    "name": "packt/packt-auth",
+    "name": "packtdev/packt-auth",
     "description": "packt-auth",
     "keywords": [
         "packt",
         "packt-auth"
     ],
-    "homepage": "https://github.com/packt/packt-auth",
+    "homepage": "https://github.com/PacktDev/packt-auth",
     "license": "MIT",
     "authors": [
         {
-            "name": "Sam Thornton",
-            "email": "samt@packt.com",
+            "name": "Packtpub.Com,",
             "role": "Developer"
         }
     ],
