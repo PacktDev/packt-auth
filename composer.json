@@ -1,23 +1,25 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "packt/packt-auth",
+    "description": "packt-auth",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "packt",
+        "packt-auth"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/packt/packt-auth",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Sam Thornton",
+            "email": "samt@packt.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "spatie/laravel-package-tools": "^1.1",
-        "illuminate/contracts": "^8.0"
+        "illuminate/contracts": "^8.0",
+        "laravel/socialite": "^5.1",
+        "socialiteproviders/microsoft-azure": "^4.2",
+        "spatie/laravel-package-tools": "^1.1"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -26,13 +28,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Packt\\PacktAuth\\": "src",
+            "Packt\\PacktAuth\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Packt\\PacktAuth\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Packt\\PacktAuth\\PacktAuthServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "PacktAuth": "Packt\\PacktAuth\\PacktAuthFacade"
             }
         }
     },
