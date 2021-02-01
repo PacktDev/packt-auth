@@ -10,7 +10,7 @@ class AddAzureAuthColumns extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('provider_id');
-            $table->string('provider', 'azure');
+            $table->string('provider')->default('azure');
         });
     }
 }
