@@ -38,7 +38,7 @@ php artisan migrate
    AZURE_CLIENT_SECRET=
    
 3. Add `@include('packt-auth::auth.azure')` to your login form
-
+4. You can override the default redirect by defining `$authRedirect` in your User model
 
 ## Changelog
 

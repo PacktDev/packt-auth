@@ -28,7 +28,7 @@ class PacktAuth extends Controller
 
         auth()->login($user);
 
-        return redirect((new $this->userModel)->authRedirect);
+        return redirect((new $this->userModel)->getRedirect());
 
     }
 

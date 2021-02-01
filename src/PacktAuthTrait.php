@@ -5,7 +5,12 @@ namespace Packt\PacktAuth;
 trait PacktAuthTrait
 {
 
-    public $authRedirect = 'http://www.google.com';
+    protected $defaultRedirect = '/dashboard';
+
+    public function getRedirect()
+    {
+        return $this->authRedirect ?? $this->defaultRedirect;
+    }
 
     public function initializePacktAuthTrait()
     {
