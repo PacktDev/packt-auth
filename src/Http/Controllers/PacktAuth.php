@@ -45,12 +45,12 @@ class PacktAuth extends Controller
             ]);
         }
         
-        $id_token_payload = explode('.', $userInfo->accessTokenResponseBody['id_token'])[1];
-        $id_token_payload = base64_decode($id_token_payload);
-        $id_token_payload = json_decode($id_token_payload);
+        $idTokenPayload = explode('.', $userInfo->accessTokenResponseBody['id_token'])[1];
+        $idTokenPayload = base64_decode($idTokenPayload);
+        $idTokenPayload = json_decode($idTokenPayload);
 
-        if ( isset($id_token_payload->roles) ) {
-            $user->roles = $id_token_payload->roles;
+        if ( isset($idTokenPayload->roles) ) {
+            $user->roles = $idTokenPayload->roles;
         }
 
         $user->markEmailAsVerified();
