@@ -43,7 +43,14 @@ class PacktAuth extends Controller
                 'provider' => $provider,
                 'provider_id' => $userInfo->id
             ]);
+        }
+        
+        $idTokenPayload = explode('.', $userInfo->accessTokenResponseBody['id_token'])[1];
+        $idTokenPayload = base64_decode($idTokenPayload);
+        $idTokenPayload = json_decode($idTokenPayload);
 
+        if ( isset($idTokenPayload->roles) ) {
+            $user->roles = $idTokenPayload->roles;
         }
 
         $user->markEmailAsVerified();
